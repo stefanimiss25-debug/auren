@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8"/>
+<title>AUREN · Process step</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+body { padding: 28px; }
+.row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: stretch; }
+.step {
+  display: grid; gap: 12px; padding: 18px; border-radius: 16px;
+  background: var(--auren-milk-2);
+  position: relative;
+}
+.step::after {
+  content: '→'; position: absolute; right: -14px; top: 22px;
+  color: var(--auren-fg-mute); font: 500 18px/1 var(--auren-sans);
+}
+.step:last-child::after { display: none; }
+.num { font-family: var(--auren-display); font-size: 44px; line-height: 0.9; color: var(--auren-ink); }
+.num .spark { color: var(--auren-ink); }
+.title { font: 600 14px/1.3 var(--auren-sans); color: var(--auren-fg-1); }
+.body { font: 400 12px/1.5 var(--auren-sans); color: var(--auren-fg-2); }
+</style>
+</head><body>
+<div class="row">
+  <div class="step"><div class="num">01</div><div class="title">Заявка</div><div class="body">Расскажите о задаче коротко.</div></div>
+  <div class="step"><div class="num">02</div><div class="title">Подбор</div><div class="body">Подбираем дизайнера под стиль и бюджет.</div></div>
+  <div class="step"><div class="num">03</div><div class="title">Утверждение</div><div class="body">Согласуем направление и сроки.</div></div>
+  <div class="step"><div class="num">04</div><div class="title">14 days</div><div class="body">Получаете готовый проект.</div></div>
+</div>
+</body></html>

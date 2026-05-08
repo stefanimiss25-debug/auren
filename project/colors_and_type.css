@@ -1,0 +1,192 @@
+/* AUREN — Colors & Type
+   Studio of Visual Renewal · 14 days to new
+   ----------------------------------------------------------------- */
+
+/* Display: Days One Regular — узнаваемость, fashion vibe, digital aesthetic.
+            Used for hero blocks, large phrases, menu, case titles.
+   Body:    Inter — modern, perfectly readable, contrasts with Days One,
+            looks clean and premium. (Suisse Intl / Manrope are listed as
+            acceptable alternates in the brief, Inter is the primary.)
+   Mono:    JetBrains Mono — captions, numerals, technical labels.
+
+   FONT NOTE: Days One loaded from Google Fonts (free, OFL). The hand-cut
+   capital wordmark in the AUREN lockup PNG is a custom didone used only
+   inside the lockup itself; Days One is the working display face for
+   everything else. */
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ---------- BRAND COLORS ---------- */
+
+  /* Hero accent — acid lime, the spark from the logo, brand-defining */
+  --auren-lime:        #D8FF3E;
+  --auren-lime-soft:   #ECFFA5;
+  --auren-lime-deep:   #A6C700;
+  --auren-lime-glow:   rgba(216, 255, 62, 0.55);
+
+  /* Logo body — soft lavender (the sparkle's aura) */
+  --auren-lavender:        #C7B6DC;
+  --auren-lavender-soft:   #E5DBF0;
+  --auren-lavender-deep:   #8E78AC;
+  --auren-lavender-glow:   rgba(199, 182, 220, 0.55);
+
+  /* Editorial mono ground — milk + deep ink + soft graphite */
+  --auren-milk:        #F7F5F0;   /* primary almost-white background */
+  --auren-milk-2:      #EFEDE6;   /* card / sectioning ground */
+  --auren-milk-3:      #E4E1D8;   /* dividers, soft contrast */
+  --auren-paper:       var(--auren-milk);
+
+  --auren-ink:         #0A0A0B;   /* deep black */
+  --auren-graphite:    #2A2A2F;   /* soft graphite — not pure black */
+  --auren-graphite-2:  #4A4A52;
+  --auren-silver:      #C8C6C0;   /* silvery details */
+  --auren-silver-2:    #A8A6A0;
+
+  /* Greys for body copy on milk */
+  --auren-fg-1:        #0A0A0B;   /* primary ink */
+  --auren-fg-2:        #4A4A52;   /* secondary */
+  --auren-fg-3:        #8A8A93;   /* tertiary / meta */
+  --auren-fg-mute:     #B7B5AE;   /* placeholder, captions */
+
+  /* Inverted (used in dark hero variant, fullscreen preview, footer) */
+  --auren-bg-dark:     #0A0A0B;
+  --auren-bg-dark-2:   #131318;
+  --auren-on-dark-1:   #F7F5F0;
+  --auren-on-dark-2:   #B7B5AE;
+
+  /* Glass — for floating cards, hero overlay panels, etc. */
+  --auren-glass-light:   rgba(255, 255, 255, 0.55);
+  --auren-glass-light-2: rgba(255, 255, 255, 0.35);
+  --auren-glass-dark:    rgba(15, 15, 18, 0.55);
+  --auren-glass-dark-2:  rgba(15, 15, 18, 0.35);
+  --auren-glass-border:  rgba(255, 255, 255, 0.6);
+  --auren-glass-border-d:rgba(255, 255, 255, 0.12);
+
+  /* Semantic */
+  --auren-accent:      var(--auren-lime);
+  --auren-accent-pop:  var(--auren-lime);
+  --auren-aura:        var(--auren-lavender);
+  --auren-link:        var(--auren-ink);
+  --auren-link-hover:  var(--auren-lime-deep);
+  --auren-success:     #5A8F3E;
+  --auren-warn:        #C58A2A;
+  --auren-danger:      #B5453A;
+
+  /* Borders */
+  --auren-line:        rgba(10, 10, 11, 0.10);
+  --auren-line-2:      rgba(10, 10, 11, 0.16);
+  --auren-line-on-dark:rgba(255, 255, 255, 0.14);
+
+  /* ---------- TYPE ---------- */
+  --auren-display: 'Days One', 'DM Serif Display', 'Bodoni Moda', system-ui, sans-serif;
+  --auren-sans:    'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --auren-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Display tokens — Days One is single-weight 400 with chunky proportions.
+     Tracking is intentionally tight on display sizes. */
+  --auren-display-1: 400 clamp(72px, 14vw, 240px) / 0.92 var(--auren-display);
+  --auren-display-2: 400 clamp(56px, 9vw, 152px)  / 0.96 var(--auren-display);
+  --auren-display-3: 400 clamp(36px, 5vw, 80px)   / 1.02 var(--auren-display);
+
+  --auren-h1: 400 clamp(40px, 5.2vw, 72px) / 1.04 var(--auren-display);
+  --auren-h2: 400 clamp(28px, 3.4vw, 48px) / 1.10 var(--auren-display);
+  --auren-h3: 600 clamp(20px, 1.8vw, 26px) / 1.20 var(--auren-sans);
+  --auren-h4: 600 16px / 1.30 var(--auren-sans);
+
+  /* Body — Inter */
+  --auren-body-lg: 400 18px / 1.55 var(--auren-sans);
+  --auren-body:    400 16px / 1.55 var(--auren-sans);
+  --auren-body-sm: 400 14px / 1.50 var(--auren-sans);
+
+  /* Eyebrow / label — wide-tracked all caps, the editorial signpost */
+  --auren-eyebrow: 500 11px / 1.2 var(--auren-sans);
+  --auren-eyebrow-tracking: 0.22em;
+
+  /* Caption / meta */
+  --auren-caption: 500 12px / 1.4 var(--auren-sans);
+  --auren-mono-sm: 400 12px / 1.4 var(--auren-mono);
+
+  /* ---------- SPACING ---------- */
+  --auren-space-1: 4px;
+  --auren-space-2: 8px;
+  --auren-space-3: 12px;
+  --auren-space-4: 16px;
+  --auren-space-5: 24px;
+  --auren-space-6: 32px;
+  --auren-space-7: 48px;
+  --auren-space-8: 64px;
+  --auren-space-9: 96px;
+  --auren-space-10: 144px;   /* the "lots of air" gap */
+
+  /* ---------- RADII ---------- */
+  --auren-r-0: 0;
+  --auren-r-1: 4px;
+  --auren-r-2: 10px;
+  --auren-r-3: 16px;
+  --auren-r-4: 24px;
+  --auren-r-5: 36px;
+  --auren-r-pill: 999px;
+
+  /* ---------- SHADOWS / ELEVATION ---------- */
+  --auren-shadow-1: 0 1px 2px rgba(10,10,11,0.04), 0 2px 6px rgba(10,10,11,0.04);
+  --auren-shadow-2: 0 6px 18px rgba(10,10,11,0.06), 0 2px 6px rgba(10,10,11,0.04);
+  --auren-shadow-3: 0 24px 60px rgba(10,10,11,0.10), 0 6px 14px rgba(10,10,11,0.04);
+  --auren-shadow-4: 0 48px 120px rgba(10,10,11,0.18), 0 12px 24px rgba(10,10,11,0.06);
+
+  /* Glow — the "spark" effects used on hover and floating objects */
+  --auren-glow-lime:     0 0 0 6px rgba(216,255,62,0.18), 0 0 36px rgba(216,255,62,0.55);
+  --auren-glow-lavender: 0 0 0 6px rgba(199,182,220,0.22), 0 0 60px rgba(199,182,220,0.55);
+  --auren-glow-soft:     0 0 80px rgba(255,255,255,0.55);
+
+  /* ---------- MOTION ---------- */
+  --auren-ease-out:    cubic-bezier(0.2, 0.75, 0.2, 1);
+  --auren-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --auren-ease-glide:  cubic-bezier(0.65, 0, 0.35, 1);
+
+  --auren-dur-1: 180ms;     /* hover state */
+  --auren-dur-2: 320ms;     /* card lift, tab switch */
+  --auren-dur-3: 560ms;     /* reveal */
+  --auren-dur-4: 900ms;     /* hero entrance, scroll fades */
+  --auren-dur-5: 1400ms;    /* slow ambient drift */
+
+  /* ---------- GRAIN / NOISE ---------- */
+  /* Tiny inline SVG grain — reuse via background-image for that filmic noise on dark sections */
+  --auren-grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0.5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/></svg>");
+}
+
+/* ---------- SEMANTIC ELEMENT DEFAULTS ---------- */
+html, body {
+  background: var(--auren-milk);
+  color: var(--auren-fg-1);
+  font: var(--auren-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1.auren, .auren h1 { font: var(--auren-h1); letter-spacing: -0.01em; text-wrap: balance; }
+h2.auren, .auren h2 { font: var(--auren-h2); letter-spacing: -0.005em; text-wrap: balance; }
+h3.auren, .auren h3 { font: var(--auren-h3); letter-spacing: 0; }
+h4.auren, .auren h4 { font: var(--auren-h4); }
+
+.auren-display-1 { font: var(--auren-display-1); letter-spacing: -0.02em; }
+.auren-display-2 { font: var(--auren-display-2); letter-spacing: -0.015em; }
+.auren-display-3 { font: var(--auren-display-3); letter-spacing: -0.01em; }
+
+p.auren, .auren p   { font: var(--auren-body); color: var(--auren-fg-2); text-wrap: pretty; }
+small.auren, .auren small { font: var(--auren-caption); color: var(--auren-fg-3); }
+
+.auren-eyebrow {
+  font: var(--auren-eyebrow);
+  letter-spacing: var(--auren-eyebrow-tracking);
+  text-transform: uppercase;
+  color: var(--auren-fg-2);
+}
+
+.auren-mono { font: var(--auren-mono-sm); letter-spacing: 0; text-transform: uppercase; }
+
+/* The "spark" highlight — used on numerals & accent words like 14 in "14 days to new" */
+.auren-spark-text { color: var(--auren-lime-deep); }
+.auren-lila-text  { color: var(--auren-lavender-deep); }
+
+/* Selection — lime on ink */
+::selection { background: var(--auren-lime); color: var(--auren-ink); }

@@ -1,0 +1,84 @@
+<!doctype html><html><head><meta charset="utf-8"/>
+<title>AUREN · Type pairing</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+body { padding: 28px 32px; overflow: hidden; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: stretch; }
+
+.col { display: grid; gap: 12px; align-content: start; }
+.col .badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  width: fit-content; padding: 6px 10px; border-radius: 999px;
+  background: var(--auren-milk-2); border: 1px solid var(--auren-line);
+  font: 500 11px/1 var(--auren-sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--auren-fg-1);
+}
+.col .badge .pip { width: 6px; height: 6px; border-radius: 999px; background: var(--auren-lime); box-shadow: 0 0 8px var(--auren-lime); }
+
+.head {
+  font-family: var(--auren-display); font-weight: 400;
+  font-size: 88px; line-height: 0.92; letter-spacing: -0.02em;
+  color: var(--auren-ink); margin: 0;
+}
+.head .spark { color: var(--auren-lime-deep); }
+
+.body-spec {
+  font: var(--auren-body-lg); color: var(--auren-fg-2); margin: 0; max-width: 32ch;
+}
+.body-spec strong { color: var(--auren-fg-1); font-weight: 600; }
+
+.meta-row { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; margin-top: 4px; }
+.meta-row .mono {
+  font: var(--auren-mono-sm); text-transform: uppercase; letter-spacing: 0.08em; color: var(--auren-fg-3);
+}
+.dot { width: 3px; height: 3px; border-radius: 999px; background: var(--auren-fg-mute); }
+
+.usage { display: grid; gap: 4px; margin-top: 8px; }
+.usage .u {
+  font: var(--auren-caption); color: var(--auren-fg-2);
+  display: grid; grid-template-columns: 14px 1fr; gap: 8px; align-items: baseline;
+}
+.usage .u::before { content: ''; width: 6px; height: 1px; background: var(--auren-fg-mute); display: block; margin-top: 7px; }
+
+.divider {
+  width: 1px; align-self: stretch; background: var(--auren-line); margin: 0 4px;
+  position: absolute; left: 50%; top: 28px; bottom: 28px;
+}
+.wrap { position: relative; }
+</style>
+</head><body>
+<div class="wrap">
+<div class="divider"></div>
+<div class="pair">
+
+  <div class="col">
+    <div class="badge"><span class="pip"></span> Display · Days One Regular</div>
+    <h1 class="head">14 days<br/><span class="spark">to</span> new.</h1>
+    <div class="meta-row">
+      <span class="mono">Days One · 88/0.92 · −2%</span>
+    </div>
+    <div class="usage">
+      <div class="u">Hero blocks, large phrases</div>
+      <div class="u">Menu, case titles, section heads</div>
+      <div class="u">Gives: узнаваемость · fashion vibe · digital aesthetic</div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="badge" style="background: var(--auren-milk); border-color: var(--auren-line-2)">Body · Inter</div>
+    <p class="body-spec"><strong>AUREN</strong> — кураторская онлайн‑студия дизайнеров. Подбираем специалиста под задачу: айдентика, сайты, motion, AI‑контент. Цикл — две недели.</p>
+    <div class="meta-row">
+      <span class="mono">Inter · 18/1.55</span>
+      <span class="dot"></span>
+      <span class="mono">400 / 500 / 600</span>
+    </div>
+    <div class="usage">
+      <div class="u">Body copy, dek, captions, UI</div>
+      <div class="u">Современный · идеально читаемый</div>
+      <div class="u">Контрастирует с Days One — clean и premium</div>
+      <div class="u" style="color: var(--auren-fg-3)">Alt: Suisse Intl · Manrope</div>
+    </div>
+  </div>
+
+</div>
+</div>
+</body></html>

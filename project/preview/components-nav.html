@@ -1,0 +1,76 @@
+<!doctype html><html><head><meta charset="utf-8"/>
+<title>AUREN · Floating nav</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+body {
+  padding: 28px; overflow: hidden;
+  background: linear-gradient(120deg, #efece4, #f7f5f0 40%, #ece6f0);
+  position: relative;
+}
+body::before { content: ''; position: absolute; inset: 0; background-image: var(--auren-grain); opacity: 0.6; pointer-events: none; }
+
+.nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+  padding: 10px 12px 10px 20px;
+  border-radius: 999px;
+  background: var(--auren-glass-light);
+  backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--auren-glass-border);
+  box-shadow: var(--auren-shadow-2);
+  position: relative; z-index: 1;
+  min-width: 0;
+}
+
+.brand {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--auren-display); font-size: 16px; line-height: 1; letter-spacing: 0.04em;
+  color: var(--auren-ink);
+  white-space: nowrap;
+}
+.brand img { width: 18px; height: 18px; flex-shrink: 0; }
+
+.links {
+  display: flex; justify-content: center;
+  gap: 18px;
+  font: 500 12px/1 var(--auren-sans);
+  letter-spacing: 0.02em;
+  color: var(--auren-fg-2);
+  white-space: nowrap;
+  min-width: 0;
+}
+.links a {
+  color: inherit; text-decoration: none;
+  padding: 6px 0;
+  transition: color 200ms;
+}
+.links a:hover { color: var(--auren-fg-1); }
+.links a.active { color: var(--auren-fg-1); }
+
+.cta {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 13px;
+  border-radius: 999px;
+  background: var(--auren-ink); color: var(--auren-on-dark-1);
+  font: 600 11px/1 var(--auren-sans); letter-spacing: 0.08em; text-transform: uppercase;
+  white-space: nowrap; flex-shrink: 0;
+  text-decoration: none;
+}
+.cta .dot { width: 5px; height: 5px; border-radius: 999px; background: var(--auren-lime); box-shadow: 0 0 8px var(--auren-lime); flex-shrink: 0; }
+</style>
+</head><body>
+
+<div class="nav">
+  <div class="brand"><img src="../assets/auren-mark.svg" alt=""/> AUREN</div>
+  <div class="links">
+    <a>About</a>
+    <a class="active">Cases</a>
+    <a>Directions</a>
+    <a>Designers</a>
+  </div>
+  <a class="cta"><span class="dot"></span> Start</a>
+</div>
+
+</body></html>

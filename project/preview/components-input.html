@@ -1,0 +1,115 @@
+<!doctype html><html><head><meta charset="utf-8"/>
+<title>AUREN · Form input</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+body { padding: 28px; overflow: hidden; }
+
+.head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 18px; }
+.head .name { font: 500 11px/1 var(--auren-sans); letter-spacing: 0.22em; text-transform: uppercase; color: var(--auren-fg-1); }
+.head .meta { font: var(--auren-mono-sm); text-transform: uppercase; letter-spacing: 0.06em; color: var(--auren-fg-3); }
+
+.fields { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.field { display: grid; gap: 6px; }
+.field .lab {
+  font: 500 10px/1 var(--auren-sans);
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--auren-fg-3);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.field .lab .req { color: var(--auren-lime-deep); font-weight: 600; }
+
+.input {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 16px; min-height: 52px;
+  background: var(--auren-paper);
+  border: 1px solid var(--auren-line);
+  border-radius: 14px;
+  font: var(--auren-body); color: var(--auren-fg-1);
+  transition: border-color 200ms var(--auren-ease-out), box-shadow 200ms var(--auren-ease-out), background 200ms;
+}
+.input:hover { border-color: var(--auren-line-2); }
+.input.placeholder { color: var(--auren-fg-mute); }
+.input .icon {
+  width: 16px; height: 16px; flex-shrink: 0; color: var(--auren-fg-3);
+  display: grid; place-items: center;
+}
+.input .caret { color: var(--auren-fg-3); margin-left: auto; font-size: 12px; }
+
+/* focus state — solid black ring with subtle lime glow */
+.input.focus {
+  background: var(--auren-milk);
+  border-color: var(--auren-ink);
+  box-shadow: 0 0 0 3px rgba(216, 255, 62, 0.30);
+  color: var(--auren-fg-1);
+}
+.input.focus .cursor {
+  display: inline-block; width: 1.5px; height: 18px; background: var(--auren-ink);
+  animation: blink 1.1s steps(1) infinite; margin-left: 1px; vertical-align: -3px;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+.help {
+  font: var(--auren-caption); color: var(--auren-fg-3);
+  display: flex; align-items: center; gap: 6px;
+}
+.help .pip { width: 4px; height: 4px; border-radius: 999px; background: var(--auren-fg-mute); }
+
+/* full-row textarea */
+.field.full { grid-column: 1 / -1; }
+.textarea {
+  min-height: 84px; padding: 14px 16px;
+  background: var(--auren-paper);
+  border: 1px solid var(--auren-line);
+  border-radius: 14px;
+  font: var(--auren-body); color: var(--auren-fg-1);
+  display: grid; align-content: space-between;
+  transition: border-color 200ms;
+}
+.textarea .ph { color: var(--auren-fg-mute); }
+.textarea .meta {
+  font: var(--auren-mono-sm); text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--auren-fg-3);
+  display: flex; justify-content: space-between; padding-top: 8px;
+  border-top: 1px dashed var(--auren-line);
+}
+.textarea .meta .count b { color: var(--auren-fg-1); font-weight: 600; }
+</style>
+</head><body>
+
+<div class="head">
+  <div class="name">Form input</div>
+  <div class="meta">default · focus · select · textarea</div>
+</div>
+
+<div class="fields">
+
+  <div class="field">
+    <div class="lab"><span>Email</span><span class="req">required</span></div>
+    <div class="input focus">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18v12H3z"/><path d="m3 7 9 7 9-7"/></svg>
+      stefani<span class="cursor"></span>
+    </div>
+    <div class="help"><span class="pip"></span> Ответим в течение дня.</div>
+  </div>
+
+  <div class="field">
+    <div class="lab"><span>Direction</span><span>1 / 12</span></div>
+    <div class="input">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>
+      Brand identity
+      <span class="caret">▾</span>
+    </div>
+    <div class="help"><span class="pip"></span> Можно выбрать несколько.</div>
+  </div>
+
+  <div class="field full">
+    <div class="lab"><span>Brief</span><span>опционально</span></div>
+    <div class="textarea">
+      <div class="ph">Расскажите, что хотите почувствовать. Аудитория, ощущение, референсы.</div>
+      <div class="meta"><span>Markdown supported</span><span class="count"><b>0</b> / 480</span></div>
+    </div>
+  </div>
+
+</div>
+</body></html>

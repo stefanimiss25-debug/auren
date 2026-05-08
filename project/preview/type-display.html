@@ -1,0 +1,33 @@
+<!doctype html><html><head><meta charset="utf-8"/>
+<title>AUREN · Display type</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+body { padding: 0; }
+.card { display: grid; grid-template-columns: 110px 1fr; gap: 28px; align-items: center; padding: 22px 28px; }
+.label { display: grid; gap: 6px; }
+.label .name { font: 500 13px/1.2 var(--auren-sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--auren-fg-1); }
+.label .meta { font: var(--auren-mono-sm); color: var(--auren-fg-3); text-transform: uppercase; letter-spacing: 0.06em; }
+.specimen { font-family: var(--auren-display); font-weight: 400; line-height: 0.92; letter-spacing: -0.02em; }
+.s-1 { font-size: 96px; color: var(--auren-ink); }
+.row { display: flex; align-items: baseline; gap: 24px; padding-bottom: 14px; border-bottom: 1px solid var(--auren-line); }
+.row:last-child { border: 0; padding-bottom: 0; }
+.tag { font: var(--auren-mono-sm); color: var(--auren-fg-3); text-transform: uppercase; letter-spacing: 0.08em; min-width: 62px; }
+.s-2 { font-family: var(--auren-display); font-weight: 400; font-size: 56px; line-height: 0.96; color: var(--auren-ink); }
+.s-3 { font-family: var(--auren-display); font-weight: 400; font-size: 32px; line-height: 1.04; color: var(--auren-ink); }
+.spark { color: var(--auren-lime-deep); }
+.scale { display: grid; gap: 14px; }
+</style>
+</head><body>
+<div class="card">
+  <div class="label">
+    <div class="name">Display</div>
+    <div class="meta">Days One · 400</div>
+    <div class="meta" style="margin-top:8px">Hero · case titles · manifesto</div>
+  </div>
+  <div class="scale">
+    <div class="row"><div class="tag">96 / 0.92</div><div class="s-2" style="font-size:96px">Renewal<span class="spark">.</span></div></div>
+    <div class="row"><div class="tag">56 / 0.96</div><div class="s-2">14 days to new</div></div>
+    <div class="row"><div class="tag">32 / 1.04</div><div class="s-3">Studio of visual renewal</div></div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8"/>
+<title>AUREN · Cursor</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+body { padding: 28px; }
+.row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.cell { aspect-ratio: 1/1; background: var(--auren-milk-2); border-radius: 16px; position: relative; overflow: hidden; }
+.cell .lab { position: absolute; bottom: 10px; left: 12px; font: var(--auren-mono-sm); text-transform: uppercase; letter-spacing: 0.08em; color: var(--auren-fg-3); }
+.cur { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.orbit { width: 36px; height: 36px; border-radius: 999px; border: 1px solid var(--auren-lavender-deep); position: relative; }
+.orbit::after { content: ''; position: absolute; top: 50%; left: 50%; width: 8px; height: 8px; border-radius: 999px; background: var(--auren-lime); box-shadow: 0 0 14px var(--auren-lime); transform: translate(-50%, -50%); }
+.view {
+  width: 64px; height: 64px; border-radius: 999px; background: var(--auren-lime); color: var(--auren-ink);
+  display: grid; place-items: center; font: 700 11px/1 var(--auren-sans); letter-spacing: 0.12em; text-transform: uppercase;
+  box-shadow: var(--auren-glow-lime);
+}
+.bar { width: 2px; height: 28px; background: var(--auren-ink); border-radius: 1px; box-shadow: 0 0 10px var(--auren-lavender-glow); }
+.spark-cur { width: 40px; height: 40px; }
+</style>
+</head><body>
+<div class="row">
+  <div class="cell"><div class="cur orbit"></div><div class="lab">Default · orbit</div></div>
+  <div class="cell"><div class="cur view">View</div><div class="lab">Over case</div></div>
+  <div class="cell"><div class="cur bar"></div><div class="lab">Over text</div></div>
+  <div class="cell"><img class="cur spark-cur" src="../assets/auren-mark.svg" alt=""/><div class="lab">Hero · sparkle</div></div>
+</div>
+</body></html>

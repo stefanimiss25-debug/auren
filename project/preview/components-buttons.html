@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"/>
+<title>AUREN · Buttons</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+body { padding: 36px 28px; display: grid; place-items: center; }
+.wrap { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: center; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 999px; font: 600 13px/1 var(--auren-sans); letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid transparent; cursor: pointer; transition: all 200ms var(--auren-ease-out); }
+.primary { background: var(--auren-ink); color: var(--auren-on-dark-1); }
+.primary:hover { box-shadow: var(--auren-glow-lime); transform: translateY(-2px); }
+.lime { background: var(--auren-lime); color: var(--auren-ink); }
+.lime:hover { box-shadow: var(--auren-glow-lime); }
+.ghost { background: transparent; color: var(--auren-ink); border-color: var(--auren-line-2); }
+.ghost:hover { background: var(--auren-milk-2); }
+.spark-dot { width: 8px; height: 8px; border-radius: 999px; background: var(--auren-lime); box-shadow: 0 0 12px var(--auren-lime); }
+.primary .spark-dot { background: var(--auren-lime); }
+.lime .spark-dot { background: var(--auren-ink); box-shadow: none; }
+.arrow { width: 14px; height: 14px; }
+</style>
+</head><body>
+<div class="wrap">
+  <a class="btn primary"><span class="spark-dot"></span> Start a project</a>
+  <a class="btn lime">Find your designer →</a>
+  <a class="btn ghost">Join Auren</a>
+</div>
+</body></html>

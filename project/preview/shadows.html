@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"/>
+<title>AUREN · Shadow & Glow</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+body { padding: 36px 28px; }
+.row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.b { aspect-ratio: 1 / 1; background: var(--auren-milk); border-radius: 16px; display: flex; flex-direction: column; justify-content: flex-end; padding: 10px; color: var(--auren-fg-2); font: var(--auren-mono-sm); text-transform: uppercase; letter-spacing: 0.06em; }
+.b .n { color: var(--auren-fg-1); font-weight: 600; margin-bottom: 2px; }
+.s1 { box-shadow: var(--auren-shadow-1); }
+.s2 { box-shadow: var(--auren-shadow-2); }
+.s3 { box-shadow: var(--auren-shadow-3); }
+.gl { box-shadow: var(--auren-glow-lime); }
+.gv { box-shadow: var(--auren-glow-lavender); }
+</style>
+</head><body>
+<div class="row">
+  <div class="b s1"><span class="n">shadow‑1</span><span>input</span></div>
+  <div class="b s2"><span class="n">shadow‑2</span><span>card</span></div>
+  <div class="b s3"><span class="n">shadow‑3</span><span>card hover</span></div>
+  <div class="b gl"><span class="n">glow lime</span><span>cta hover</span></div>
+  <div class="b gv"><span class="n">glow lavender</span><span>floating</span></div>
+</div>
+</body></html>

@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset="utf-8"/>
+<title>AUREN · Spacing scale</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+body { padding: 24px 28px; overflow: hidden; }
+.head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 16px; }
+.head .name { font: 500 11px/1 var(--auren-sans); letter-spacing: 0.22em; text-transform: uppercase; color: var(--auren-fg-1); }
+.head .meta { font: var(--auren-mono-sm); text-transform: uppercase; letter-spacing: 0.06em; color: var(--auren-fg-3); }
+
+.scale { display: grid; gap: 6px; }
+.row {
+  display: grid;
+  grid-template-columns: 70px 56px 1fr;
+  align-items: center;
+  gap: 14px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--auren-line);
+}
+.row:last-child { border: 0; }
+.row .key { font: 600 12px/1 var(--auren-mono); color: var(--auren-ink); letter-spacing: 0.04em; }
+.row .val { font: var(--auren-mono-sm); color: var(--auren-fg-3); text-transform: uppercase; letter-spacing: 0.06em; text-align: right; }
+.row .bar-wrap { display: flex; align-items: center; gap: 10px; }
+.row .bar { height: 10px; background: var(--auren-ink); border-radius: 1px; }
+.row .use { font: var(--auren-caption); color: var(--auren-fg-2); white-space: nowrap; }
+
+.row.air .bar { background: var(--auren-lime); }
+.row.air .key { color: var(--auren-lime-deep); }
+.row.air .use b { color: var(--auren-ink); font-weight: 700; }
+</style>
+</head><body>
+
+<div class="head">
+  <div class="name">Spacing scale · 4 px base</div>
+  <div class="meta">--auren-space-1 → 10</div>
+</div>
+
+<div class="scale">
+  <div class="row"><div class="key">--space-1</div><div class="val">4 px</div><div class="bar-wrap"><div class="bar" style="width:4px"></div><div class="use">hairline gap</div></div></div>
+  <div class="row"><div class="key">--space-2</div><div class="val">8 px</div><div class="bar-wrap"><div class="bar" style="width:8px"></div><div class="use">chip · pip</div></div></div>
+  <div class="row"><div class="key">--space-3</div><div class="val">12 px</div><div class="bar-wrap"><div class="bar" style="width:12px"></div><div class="use">stack inside card</div></div></div>
+  <div class="row"><div class="key">--space-4</div><div class="val">16 px</div><div class="bar-wrap"><div class="bar" style="width:16px"></div><div class="use">card padding · grid gap</div></div></div>
+  <div class="row"><div class="key">--space-5</div><div class="val">24 px</div><div class="bar-wrap"><div class="bar" style="width:24px"></div><div class="use">block gap</div></div></div>
+  <div class="row"><div class="key">--space-6</div><div class="val">32 px</div><div class="bar-wrap"><div class="bar" style="width:32px"></div><div class="use">cluster gap</div></div></div>
+  <div class="row"><div class="key">--space-7</div><div class="val">48 px</div><div class="bar-wrap"><div class="bar" style="width:48px"></div><div class="use">section internal</div></div></div>
+  <div class="row"><div class="key">--space-8</div><div class="val">64 px</div><div class="bar-wrap"><div class="bar" style="width:64px"></div><div class="use">section padding</div></div></div>
+  <div class="row"><div class="key">--space-9</div><div class="val">96 px</div><div class="bar-wrap"><div class="bar" style="width:96px"></div><div class="use">between sections</div></div></div>
+  <div class="row air"><div class="key">--space-10</div><div class="val">144 px</div><div class="bar-wrap"><div class="bar" style="width:144px"></div><div class="use"><b>«много воздуха»</b> · hero · marquee</div></div></div>
+</div>
+</body></html>

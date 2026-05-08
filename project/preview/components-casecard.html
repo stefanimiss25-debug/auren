@@ -1,0 +1,46 @@
+<!doctype html><html><head><meta charset="utf-8"/>
+<title>AUREN · Case card</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+body { padding: 24px; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.case {
+  position: relative; border-radius: 16px; overflow: hidden;
+  background: var(--auren-milk-2); aspect-ratio: 4/3;
+  box-shadow: var(--auren-shadow-2);
+  transition: all 320ms var(--auren-ease-out);
+}
+.case img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.case .meta {
+  position: absolute; left: 12px; right: 12px; bottom: 12px;
+  padding: 12px 14px; border-radius: 14px;
+  background: var(--auren-glass-dark); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  color: var(--auren-on-dark-1);
+  display: flex; justify-content: space-between; align-items: center; gap: 10px;
+  border: 1px solid var(--auren-glass-border-d);
+}
+.case h3 { margin: 0; font-family: var(--auren-display); font-weight: 400; font-size: 18px; }
+.case .tag { font: var(--auren-mono-sm); text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.7; }
+.case .arrow {
+  width: 30px; height: 30px; border-radius: 999px; background: var(--auren-lime); color: var(--auren-ink);
+  display: grid; place-items: center; font-weight: 700;
+}
+</style>
+</head><body>
+<div class="row">
+  <div class="case">
+    <img src="../assets/case-lumen-1.png" alt=""/>
+    <div class="meta">
+      <div><h3>Lumen Fest</h3><div class="tag">Web · Identity</div></div>
+      <div class="arrow">↗</div>
+    </div>
+  </div>
+  <div class="case">
+    <img src="../assets/case-senora-1.png" alt=""/>
+    <div class="meta">
+      <div><h3>СЕНОРА</h3><div class="tag">Brand · Architecture</div></div>
+      <div class="arrow">↗</div>
+    </div>
+  </div>
+</div>
+</body></html>

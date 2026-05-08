@@ -1,0 +1,51 @@
+<!doctype html><html><head><meta charset="utf-8"/>
+<title>AUREN · Radii</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+body { padding: 26px 28px; overflow: hidden; }
+.head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 18px; }
+.head .name { font: 500 11px/1 var(--auren-sans); letter-spacing: 0.22em; text-transform: uppercase; color: var(--auren-fg-1); }
+.head .meta { font: var(--auren-mono-sm); text-transform: uppercase; letter-spacing: 0.06em; color: var(--auren-fg-3); }
+
+.row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+.cell { display: grid; gap: 10px; justify-items: start; }
+.shape {
+  width: 100%; aspect-ratio: 1 / 1;
+  background: var(--auren-paper);
+  border: 1px solid var(--auren-line-2);
+  position: relative;
+}
+.shape::before {
+  content: ''; position: absolute; inset: 18%;
+  background: var(--auren-ink);
+  border-radius: inherit;
+  /* inner shape inherits less radius — visually subtler */
+}
+.cell.s1 .shape { border-radius: 4px; }
+.cell.s2 .shape { border-radius: 10px; }
+.cell.s3 .shape { border-radius: 16px; }
+.cell.s4 .shape { border-radius: 24px; }
+.cell.s5 .shape { border-radius: 36px; }
+.cell.sp .shape { border-radius: 999px; }
+.cell.sp .shape::before { background: var(--auren-lime); }
+.cap { display: grid; gap: 2px; }
+.cap .k { font: 600 12px/1 var(--auren-mono); color: var(--auren-ink); letter-spacing: 0.04em; }
+.cap .v { font: var(--auren-mono-sm); color: var(--auren-fg-3); text-transform: uppercase; letter-spacing: 0.06em; }
+.cap .u { font: var(--auren-caption); color: var(--auren-fg-2); margin-top: 2px; }
+</style>
+</head><body>
+
+<div class="head">
+  <div class="name">Corner radii</div>
+  <div class="meta">--auren-r-1 → r-pill</div>
+</div>
+
+<div class="row">
+  <div class="cell s1"><div class="shape"></div><div class="cap"><div class="k">--r-1</div><div class="v">4 px</div><div class="u">tag · chip</div></div></div>
+  <div class="cell s2"><div class="shape"></div><div class="cap"><div class="k">--r-2</div><div class="v">10 px</div><div class="u">avatar · thumb</div></div></div>
+  <div class="cell s3"><div class="shape"></div><div class="cap"><div class="k">--r-3</div><div class="v">16 px</div><div class="u">card · case</div></div></div>
+  <div class="cell s4"><div class="shape"></div><div class="cap"><div class="k">--r-4</div><div class="v">24 px</div><div class="u">feature panel</div></div></div>
+  <div class="cell s5"><div class="shape"></div><div class="cap"><div class="k">--r-5</div><div class="v">36 px</div><div class="u">hero glass</div></div></div>
+  <div class="cell sp"><div class="shape"></div><div class="cap"><div class="k">--r-pill</div><div class="v">999</div><div class="u">button · nav</div></div></div>
+</div>
+</body></html>

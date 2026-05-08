@@ -1,0 +1,35 @@
+<!doctype html><html><head><meta charset="utf-8"/>
+<title>AUREN · Direction tags</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+body { padding: 28px; }
+.wrap { display: flex; gap: 8px; flex-wrap: wrap; }
+.tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 14px; border-radius: 999px;
+  border: 1px solid var(--auren-line-2);
+  background: transparent;
+  font: 500 13px/1 var(--auren-sans);
+  color: var(--auren-fg-1);
+  transition: all 200ms var(--auren-ease-out);
+}
+.tag:hover { background: var(--auren-ink); color: var(--auren-on-dark-1); border-color: var(--auren-ink); }
+.tag.active { background: var(--auren-lime); border-color: var(--auren-lime); color: var(--auren-ink); }
+.tag .dot { width: 6px; height: 6px; border-radius: 999px; background: currentColor; opacity: 0.4; }
+</style>
+</head><body>
+<div class="wrap">
+  <span class="tag active"><span class="dot"></span>All work</span>
+  <span class="tag">Brand Identity</span>
+  <span class="tag">Web Design</span>
+  <span class="tag">UX/UI</span>
+  <span class="tag">Motion</span>
+  <span class="tag">AI Visuals</span>
+  <span class="tag">Packaging</span>
+  <span class="tag">SMM Design</span>
+  <span class="tag">3D</span>
+  <span class="tag">Presentations</span>
+  <span class="tag">Video</span>
+  <span class="tag">Creative Direction</span>
+</div>
+</body></html>

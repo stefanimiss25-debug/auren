@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8"/>
+<title>AUREN · Brand colors</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+body { padding: 24px; }
+.row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.swatch { padding: 18px; border-radius: 16px; display: grid; gap: 10px; min-height: 130px; align-content: space-between; position: relative; overflow: hidden; }
+.swatch.lime { background: var(--auren-lime); color: var(--auren-ink); }
+.swatch.lavender { background: var(--auren-lavender); color: var(--auren-ink); }
+.swatch.lime::after, .swatch.lavender::after {
+  content: ''; position: absolute; inset: -40%; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.5), transparent 60%);
+  pointer-events: none; mix-blend-mode: overlay;
+}
+.name { font-family: var(--auren-display); font-size: 24px; line-height: 1; }
+.meta { display: flex; gap: 16px; font: var(--auren-mono-sm); text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.75; }
+</style>
+</head><body>
+<div class="row">
+  <div class="swatch lime">
+    <div class="name">Acid Lime</div>
+    <div class="meta"><span>#D8FF3E</span><span>--auren-lime</span></div>
+  </div>
+  <div class="swatch lavender">
+    <div class="name">Lavender Aura</div>
+    <div class="meta"><span>#C7B6DC</span><span>--auren-lavender</span></div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,46 @@
+<!doctype html><html><head><meta charset="utf-8"/>
+<title>AUREN · Logo mark — variants</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+body { padding: 22px 28px; overflow: hidden; }
+.head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 16px; }
+.head .name { font: 500 11px/1 var(--auren-sans); letter-spacing: 0.22em; text-transform: uppercase; color: var(--auren-fg-1); }
+.head .meta { font: var(--auren-mono-sm); text-transform: uppercase; letter-spacing: 0.06em; color: var(--auren-fg-3); }
+
+.row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+.tile {
+  aspect-ratio: 1 / 1; border-radius: 14px;
+  display: grid; place-items: center; position: relative; overflow: hidden;
+  border: 1px solid var(--auren-line);
+}
+.tile img { width: 64%; height: auto; display: block; }
+
+.tile.t-milk     { background: var(--auren-milk); }
+.tile.t-paper    { background: var(--auren-milk-2); }
+.tile.t-ink      { background: var(--auren-ink); border-color: var(--auren-ink); }
+.tile.t-lime     { background: var(--auren-lime); border-color: var(--auren-lime-deep); }
+.tile.t-lavender { background: var(--auren-lavender-soft); border-color: var(--auren-lavender); }
+
+.cap {
+  position: absolute; left: 8px; bottom: 8px;
+  font: var(--auren-mono-sm); text-transform: uppercase; letter-spacing: 0.06em;
+  font-size: 9px; color: var(--auren-fg-3);
+}
+.t-ink .cap { color: var(--auren-on-dark-2); }
+.t-lime .cap, .t-lavender .cap { color: var(--auren-ink); }
+</style>
+</head><body>
+
+<div class="head">
+  <div class="name">Logo mark · variants</div>
+  <div class="meta">single artwork · varying ground</div>
+</div>
+
+<div class="row">
+  <div class="tile t-milk">     <img src="../assets/auren-mark.svg" alt=""/><span class="cap">Milk</span></div>
+  <div class="tile t-paper">    <img src="../assets/auren-mark.svg" alt=""/><span class="cap">Paper</span></div>
+  <div class="tile t-lavender"> <img src="../assets/auren-mark.svg" alt=""/><span class="cap">Lavender soft</span></div>
+  <div class="tile t-lime">     <img src="../assets/auren-mark.svg" alt=""/><span class="cap">Lime</span></div>
+  <div class="tile t-ink">      <img src="../assets/auren-mark.svg" alt=""/><span class="cap">Ink</span></div>
+</div>
+</body></html>

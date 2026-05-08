@@ -1,0 +1,46 @@
+<!doctype html><html><head><meta charset="utf-8"/>
+<title>AUREN · Motion</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+body { padding: 28px; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: center; }
+.col { display: grid; gap: 10px; }
+.h { font: var(--auren-eyebrow); letter-spacing: 0.22em; text-transform: uppercase; color: var(--auren-fg-3); }
+.list { display: grid; gap: 8px; font: var(--auren-body-sm); color: var(--auren-fg-2); }
+.list b { color: var(--auren-fg-1); font-weight: 600; }
+.curve { background: var(--auren-milk-2); border-radius: 16px; padding: 14px; height: 180px; position: relative; overflow: hidden; }
+.curve svg { display: block; width: 100%; height: 100%; }
+.curve .label { position: absolute; bottom: 10px; left: 14px; font: var(--auren-mono-sm); text-transform: uppercase; letter-spacing: 0.08em; color: var(--auren-fg-3); }
+.dot { fill: var(--auren-lime); }
+.path { stroke: var(--auren-ink); stroke-width: 2; fill: none; }
+@keyframes glide {
+  0% { offset-distance: 0%; } 100% { offset-distance: 100%; }
+}
+.bead {
+  width: 14px; height: 14px; border-radius: 999px; background: var(--auren-lime);
+  box-shadow: 0 0 16px var(--auren-lime);
+  offset-path: path('M 10 140 C 80 140, 110 130, 150 80 C 210 10, 250 10, 290 10');
+  animation: glide 2.4s var(--auren-ease-out) infinite;
+  position: absolute;
+}
+</style>
+</head><body>
+<div class="row">
+  <div class="col">
+    <div class="h">Easing & duration</div>
+    <div class="list">
+      <div><b>ease‑out</b> · 0.2, 0.75, 0.2, 1 — UI default</div>
+      <div><b>ease‑spring</b> · 0.34, 1.56, 0.64, 1 — floating objects</div>
+      <div><b>ease‑glide</b> · 0.65, 0, 0.35, 1 — long fades</div>
+      <div style="margin-top:6px"><b>180ms</b> hover · <b>320ms</b> lift · <b>560ms</b> reveal · <b>900ms</b> hero · <b>1.4s</b> drift</div>
+    </div>
+  </div>
+  <div class="curve">
+    <svg viewBox="0 0 300 160" preserveAspectRatio="none">
+      <path class="path" d="M 10 140 C 80 140, 110 130, 150 80 C 210 10, 250 10, 290 10"/>
+    </svg>
+    <div class="bead"></div>
+    <div class="label">ease‑out · 320ms</div>
+  </div>
+</div>
+</body></html>
