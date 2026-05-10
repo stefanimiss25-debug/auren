@@ -447,12 +447,12 @@ a { color: inherit; text-decoration: none; }
 /* ─── LIGHTBOX ────────────────────────────────────────────── */
 .lightbox {
   position: fixed; inset: 0; background: rgba(10,10,11,.94); z-index: 200;
-  display: grid; place-items: center; padding: 5vh 5vw;
+  display: grid; place-items: center; padding: 5vh 80px;
   opacity: 0; pointer-events: none; transition: opacity 320ms;
 }
 .lightbox.open { opacity: 1; pointer-events: auto; }
 .lightbox::before { content: ''; position: absolute; inset: 0; background-image: var(--auren-grain); opacity: 0.4; pointer-events: none; }
-.lightbox img { max-width: 92vw; max-height: 86vh; border-radius: var(--auren-r-3); box-shadow: var(--auren-shadow-4); position: relative; z-index: 1; }
+.lightbox img { max-width: 86vw; max-height: 82vh; border-radius: var(--auren-r-3); box-shadow: var(--auren-shadow-4); position: relative; z-index: 1; transition: opacity 200ms; }
 .lightbox-close {
   position: absolute; top: 24px; right: 24px; width: 48px; height: 48px; border-radius: 999px;
   background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.2);
@@ -460,7 +460,25 @@ a { color: inherit; text-decoration: none; }
   display: grid; place-items: center; transition: background 200ms;
 }
 .lightbox-close:hover { background: rgba(255,255,255,.14); }
-.lightbox-caption { position: absolute; left: 24px; bottom: 24px; color: var(--auren-on-dark-2); font: var(--auren-mono-sm); text-transform: uppercase; letter-spacing: 0.08em; z-index: 2; }
+.lightbox-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 52px; height: 52px; border-radius: 999px;
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2);
+  color: var(--auren-on-dark-1); font: 400 22px/1 var(--auren-sans);
+  cursor: pointer; z-index: 2; display: grid; place-items: center;
+  transition: background 200ms, opacity 200ms;
+}
+.lightbox-nav:hover { background: rgba(255,255,255,.18); }
+.lb-prev { left: 20px; }
+.lb-next { right: 20px; }
+.lightbox-bottom {
+  position: absolute; left: 24px; right: 24px; bottom: 24px;
+  display: flex; justify-content: space-between; align-items: center;
+  z-index: 2;
+}
+.lightbox-caption { color: var(--auren-on-dark-2); font: var(--auren-mono-sm); text-transform: uppercase; letter-spacing: 0.08em; }
+.lightbox-counter { color: var(--auren-on-dark-2); font: var(--auren-mono-sm); letter-spacing: 0.06em; }
+.gallery-badge { font: 600 11px/1 var(--auren-sans); letter-spacing: 0.06em; min-width: 36px; justify-content: center; }
 
 /* ─── FOR DESIGNERS ───────────────────────────────────────── */
 .designers-block {

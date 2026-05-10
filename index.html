@@ -217,18 +217,22 @@
   </div>
 
   <div class="masonry reveal" id="masonry">
-    <a class="case-card" href="#" data-src="assets/case-lumen-1.png" data-title="Lumen Fest" data-tag="Web · Identity" data-cat="web identity" aria-label="View case: Lumen Fest">
-      <img src="assets/case-lumen-1.png" alt="Lumen Fest — brand identity" loading="lazy"/>
+    <a class="case-card" href="#"
+       data-images="assets/case-lumen-1.png,assets/case-lumen-2.png,assets/case-lumen-3.png,assets/case-lumen-4.png"
+       data-title="Lumen Fest" data-tag="Web · Identity" data-cat="web identity" aria-label="View project: Lumen Fest">
+      <img src="assets/case-lumen-1.png" alt="Lumen Fest" loading="lazy"/>
       <div class="case-meta" aria-hidden="true">
         <div><h3>Lumen Fest</h3><div class="case-tag">Web · Identity</div></div>
-        <div class="case-arrow">↗</div>
+        <div class="case-arrow gallery-badge">4 ↗</div>
       </div>
     </a>
-    <a class="case-card" href="#" data-src="assets/case-senora-1.png" data-title="СЕНОРА" data-tag="Brand · Architecture" data-cat="identity" aria-label="View case: СЕНОРА">
-      <img src="assets/case-senora-1.png" alt="СЕНОРА — brand" loading="lazy"/>
+    <a class="case-card" href="#"
+       data-images="assets/case-senora-1.png,assets/case-senora-2.png,assets/case-senora-3.png"
+       data-title="СЕНОРА" data-tag="Brand · Identity" data-cat="identity" aria-label="View project: СЕНОРА">
+      <img src="assets/case-senora-1.png" alt="СЕНОРА" loading="lazy"/>
       <div class="case-meta" aria-hidden="true">
-        <div><h3>СЕНОРА</h3><div class="case-tag">Brand · Architecture</div></div>
-        <div class="case-arrow">↗</div>
+        <div><h3>СЕНОРА</h3><div class="case-tag">Brand · Identity</div></div>
+        <div class="case-arrow gallery-badge">3 ↗</div>
       </div>
     </a>
     <a class="case-card" href="#" data-src="assets/case-poster-1.png" data-title="Poster series" data-tag="Print · Poster" data-cat="poster" aria-label="View case: Poster series">
@@ -245,24 +249,10 @@
         <div class="case-arrow">↗</div>
       </div>
     </a>
-    <a class="case-card" href="#" data-src="assets/case-lumen-3.png" data-title="Lumen Fest" data-tag="Web · Identity" data-cat="web identity" aria-label="View case: Lumen Fest">
-      <img src="assets/case-lumen-3.png" alt="Lumen Fest — web" loading="lazy"/>
-      <div class="case-meta" aria-hidden="true">
-        <div><h3>Lumen Fest</h3><div class="case-tag">Web · Identity</div></div>
-        <div class="case-arrow">↗</div>
-      </div>
-    </a>
     <a class="case-card" href="#" data-src="assets/case-logo-1.png" data-title="Florenza" data-tag="Logo" data-cat="logo" aria-label="View case: Florenza">
       <img src="assets/case-logo-1.png" alt="Florenza logo" loading="lazy"/>
       <div class="case-meta" aria-hidden="true">
         <div><h3>Florenza</h3><div class="case-tag">Logo</div></div>
-        <div class="case-arrow">↗</div>
-      </div>
-    </a>
-    <a class="case-card" href="#" data-src="assets/case-senora-2.png" data-title="СЕНОРА — interior" data-tag="Brand · Photo" data-cat="identity" aria-label="View case: СЕНОРА interior">
-      <img src="assets/case-senora-2.png" alt="СЕНОРА — interior" loading="lazy"/>
-      <div class="case-meta" aria-hidden="true">
-        <div><h3>СЕНОРА — interior</h3><div class="case-tag">Brand · Photo</div></div>
         <div class="case-arrow">↗</div>
       </div>
     </a>
@@ -280,24 +270,10 @@
         <div class="case-arrow">↗</div>
       </div>
     </a>
-    <a class="case-card" href="#" data-src="assets/case-lumen-2.png" data-title="Lumen Fest — type" data-tag="Web · Type" data-cat="web" aria-label="View case: Lumen Fest type">
-      <img src="assets/case-lumen-2.png" alt="Lumen Fest — type" loading="lazy"/>
-      <div class="case-meta" aria-hidden="true">
-        <div><h3>Lumen Fest — type</h3><div class="case-tag">Web · Type</div></div>
-        <div class="case-arrow">↗</div>
-      </div>
-    </a>
     <a class="case-card" href="#" data-src="assets/case-poster-3.png" data-title="Поэтический вечер" data-tag="Poster" data-cat="poster" aria-label="View case: Поэтический вечер">
       <img src="assets/case-poster-3.png" alt="Поэтический вечер poster" loading="lazy"/>
       <div class="case-meta" aria-hidden="true">
         <div><h3>Поэтический вечер</h3><div class="case-tag">Poster</div></div>
-        <div class="case-arrow">↗</div>
-      </div>
-    </a>
-    <a class="case-card" href="#" data-src="assets/case-senora-3.png" data-title="СЕНОРА — merch" data-tag="Brand · Merch" data-cat="identity" aria-label="View case: СЕНОРА merch">
-      <img src="assets/case-senora-3.png" alt="СЕНОРА — merch" loading="lazy"/>
-      <div class="case-meta" aria-hidden="true">
-        <div><h3>СЕНОРА — merch</h3><div class="case-tag">Brand · Merch</div></div>
         <div class="case-arrow">↗</div>
       </div>
     </a>
@@ -342,8 +318,13 @@
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
   <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+  <button class="lightbox-nav lb-prev" id="lightboxPrev" aria-label="Previous">←</button>
   <img id="lightboxImg" src="" alt=""/>
-  <div class="lightbox-caption" id="lightboxCap"></div>
+  <button class="lightbox-nav lb-next" id="lightboxNext" aria-label="Next">→</button>
+  <div class="lightbox-bottom">
+    <div class="lightbox-caption" id="lightboxCap"></div>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+  </div>
 </div>
 
 <!-- FOR DESIGNERS -->
@@ -506,27 +487,69 @@
   items.forEach(function (i) { io.observe(i); });
 }());
 
-// ── LIGHTBOX ─────────────────────────────────────────────────
+// ── LIGHTBOX с галереей ───────────────────────────────────────
 (function () {
-  var lb = document.getElementById('lightbox');
-  var lbImg = document.getElementById('lightboxImg');
-  var lbCap = document.getElementById('lightboxCap');
+  var lb      = document.getElementById('lightbox');
+  var lbImg   = document.getElementById('lightboxImg');
+  var lbCap   = document.getElementById('lightboxCap');
+  var lbCount = document.getElementById('lightboxCounter');
   var closeBtn = document.getElementById('lightboxClose');
+  var prevBtn  = document.getElementById('lightboxPrev');
+  var nextBtn  = document.getElementById('lightboxNext');
   if (!lb) return;
+
+  var gallery = [];
+  var gIdx = 0;
+
+  function show(idx) {
+    gIdx = idx;
+    lbImg.src = gallery[idx];
+    if (gallery.length > 1) {
+      lbCount.textContent = (idx + 1) + ' / ' + gallery.length;
+      prevBtn.style.opacity = idx > 0 ? '1' : '0.2';
+      prevBtn.style.pointerEvents = idx > 0 ? '' : 'none';
+      nextBtn.style.opacity = idx < gallery.length - 1 ? '1' : '0.2';
+      nextBtn.style.pointerEvents = idx < gallery.length - 1 ? '' : 'none';
+      prevBtn.style.display = '';
+      nextBtn.style.display = '';
+    } else {
+      lbCount.textContent = '';
+      prevBtn.style.display = 'none';
+      nextBtn.style.display = 'none';
+    }
+  }
+
+  function open(images, title, tag) {
+    gallery = images;
+    lbImg.alt = title || '';
+    lbCap.textContent = (title || '') + ' · ' + (tag || '');
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    show(0);
+  }
+
+  function close() { lb.classList.remove('open'); document.body.style.overflow = ''; }
+
   document.querySelectorAll('.case-card').forEach(function (c) {
     c.addEventListener('click', function (e) {
       e.preventDefault();
-      lbImg.src = c.dataset.src;
-      lbImg.alt = c.dataset.title || '';
-      lbCap.textContent = (c.dataset.title || '') + ' · ' + (c.dataset.tag || '');
-      lb.classList.add('open');
-      document.body.style.overflow = 'hidden';
+      var imgs = c.dataset.images
+        ? c.dataset.images.split(',')
+        : [c.dataset.src];
+      open(imgs, c.dataset.title, c.dataset.tag);
     });
   });
-  function close() { lb.classList.remove('open'); document.body.style.overflow = ''; }
+
+  prevBtn.addEventListener('click', function (e) { e.stopPropagation(); if (gIdx > 0) show(gIdx - 1); });
+  nextBtn.addEventListener('click', function (e) { e.stopPropagation(); if (gIdx < gallery.length - 1) show(gIdx + 1); });
   closeBtn.addEventListener('click', close);
   lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
-  addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  addEventListener('keydown', function (e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft'  && gIdx > 0) show(gIdx - 1);
+    if (e.key === 'ArrowRight' && gIdx < gallery.length - 1) show(gIdx + 1);
+  });
 }());
 
 // ── FILTER ───────────────────────────────────────────────────
