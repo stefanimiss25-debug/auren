@@ -208,7 +208,6 @@
       <h2 id="cases-heading" style="margin:0;font-family:var(--auren-display);font-weight:400;font-size:clamp(40px,6vw,96px);line-height:0.96;letter-spacing:-0.02em;max-width:18ch">Cases.</h2>
     </div>
     <div class="cases-filter" role="group" aria-label="Filter cases">
-      <button class="filter-tag active" data-filter="all">All</button>
       <button class="filter-tag" data-filter="identity">Identity</button>
       <button class="filter-tag" data-filter="web">Web</button>
       <button class="filter-tag" data-filter="poster">Posters</button>
@@ -302,7 +301,7 @@
         <div class="case-arrow">↗</div>
       </div>
     </a>
-    <a class="case-card" href="#" data-src="assets/case-logo-2.png" data-title="Swift Way" data-tag="Logo" data-cat="logo identity" aria-label="View case: Swift Way">
+    <a class="case-card" href="#" data-src="assets/case-logo-2.png" data-title="Swift Way" data-tag="Logo" data-cat="logo" aria-label="View case: Swift Way">
       <img src="assets/case-logo-2.png" alt="Swift Way logo" loading="lazy"/>
       <div class="case-meta" aria-hidden="true">
         <div><h3>Swift Way</h3><div class="case-tag">Logo</div></div>
@@ -522,17 +521,19 @@
   var cards = document.querySelectorAll('.case-card');
   tags.forEach(function (t) {
     t.addEventListener('click', function () {
+      var wasActive = t.classList.contains('active');
       tags.forEach(function (x) { x.classList.remove('active'); });
-      t.classList.add('active');
-      var f = t.dataset.filter;
-      cards.forEach(function (c) {
-        if (f === 'all') {
-          c.style.display = '';
-        } else {
+      if (wasActive) {
+        // деактивируем — показываем все
+        cards.forEach(function (c) { c.style.display = ''; });
+      } else {
+        t.classList.add('active');
+        var f = t.dataset.filter;
+        cards.forEach(function (c) {
           var cat = (c.dataset.cat || '').split(' ');
           c.style.display = cat.indexOf(f) !== -1 ? '' : 'none';
-        }
-      });
+        });
+      }
     });
   });
 }());
